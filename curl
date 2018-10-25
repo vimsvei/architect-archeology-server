@@ -1,0 +1,34 @@
+curl -d '{"name":"Ромашка","fullName":"ООО Ромашка","code":"RMSHK","site":"http://ромашка.рф"}' \
+-H "Content-Type: application/json" \
+-X POST http://localhost:51081/company
+
+curl -d '{"name":"Подорожник","fullName":"ООО Подорожник","code":"ONROAD","site":"http://подорожник.рф"}' \
+-H "Content-Type: application/json" \
+-X POST http://localhost:51081/company
+
+
+curl -d '{"company":{"name":"Буревестник","fullName":"ООО Буревестник","code":"BRVST","site":"http://буревестник.рф"},"user":{"firstName": "Андрей", "lastName": "Головотяпов", "email":"andrew@gmail.com", "password":"asdfgUI!$"}}' \
+-H "Content-Type: application/json" \
+-X POST http://localhost:51081/signup
+
+curl -d '{"login":"andrew@gmail.com","password":"asdfgUI!$"}' -H "Content-Type: application/json" -X POST http://localhost:51081/auth
+
+curl -d '{"login":"andrew@gmail.com","password":"asdfgUI!$"}' -H "Content-Type: application/json" -X POST http://localhost:51081/auth
+
+
+{"code":200,
+"data":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbiI6ImFuZHJld0BnbWFpbC5jb20iLCJjb21wYW55Q29kZSI6IkJSVlNUIiwiaWF0IjoxNTM5NzgyODk5LCJleHAiOjE1Mzk3ODY0OTl9.50_KoJPdzJqm45BCUqyX7IXvkmauruSLGyduKXflMEA","message":"Success","success":true}
+
+curl -X GET -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbiI6ImFuZHJld0BnbWFpbC5jb20iLCJjb21wYW55IjoiZGI5OTkzYTAtZDMxMS0xMWU4LTg0MDMtODczMGE3Yjg2MjM2IiwiaWF0IjoxNTM5ODkzNDU4LCJleHAiOjE1Mzk4OTcwNTh9.P0yGsXO0aucJP9i3pE5cZhgZG8JB9s1ttuLcgGssJDw Content-Type: application/json" http://localhost:51081/user/400WS8
+
+{"code":200,"data":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbiI6ImFuZHJld0BnbWFpbC5jb20iLCJjb21wYW55IjoiZjcxNGY5YjAtZDMwZS0xMWU4LTk2NjItNmI1YjM5MWQyY2M0IiwiaWF0IjoxNTM5ODkzMDcwLCJleHAiOjE1Mzk4OTY2NzB9.j84SYXMGdiOXVqF5YRwjcbogsweNM_WHPHCQ1GNWMSA","message":"Success","success":true}
+
+{"code":200,"data":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbXAiOiI0Y2E1MDA5MC1kNTFkLTExZTgtYTliNS1iNzBhMzVjYjhmZWEiLCJpYXQiOjE1NDAxMTgyOTcsImV4cCI6MTU0MDE0NzA5NywiaXNzIjoiQXJjaGl0ZWN0IEFyY2hlb2xvZ3kncyBSRVNUIEFQSSBzZXJ2ZXIiLCJzdWIiOiI0Y2I5NGJlMC1kNTFkLTExZTgtYTliNS1iNzBhMzVjYjhmZWEifQ.dFfgP8O_GYwdQH_rcuzajac_qe8RbcFD36Roa36D0rM","message":"Success","success":true}
+
+curl -X GET -H "Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbXAiOiI0Y2E1MDA5MC1kNTFkLTExZTgtYTliNS1iNzBhMzVjYjhmZWEiLCJpYXQiOjE1NDAxMTgyOTcsImV4cCI6MTU0MDE0NzA5NywiaXNzIjoiQXJjaGl0ZWN0IEFyY2hlb2xvZ3kncyBSRVNUIEFQSSBzZXJ2ZXIiLCJzdWIiOiI0Y2I5NGJlMC1kNTFkLTExZTgtYTliNS1iNzBhMzVjYjhmZWEifQ.dFfgP8O_GYwdQH_rcuzajac_qe8RbcFD36Roa36D0rM Content-Type: application/json" http://localhost:51081/user/ZWA95U
+
+
+curl -d '{"access_token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbXAiOiI0Y2E1MDA5MC1kNTFkLTExZTgtYTliNS1iNzBhMzVjYjhmZWEiLCJpYXQiOjE1NDAxMjUwNzAsImV4cCI6MTU0MDE1Mzg3MCwiaXNzIjoiQXJjaGl0ZWN0IEFyY2hlb2xvZ3kncyBSRVNUIEFQSSBzZXJ2ZXIiLCJzdWIiOiI0Y2I5NGJlMC1kNTFkLTExZTgtYTliNS1iNzBhMzVjYjhmZWEifQ.Rfzxgnb8BklrWL2TROCjIFzPnxh7ic9TqUtJvLkpqns"}' -H "Content-Type: application/json" -X GET http://localhost:51081/user/ZWA95U
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbXAiOiI0Y2E1MDA5MC1kNTFkLTExZTgtYTliNS1iNzBhMzVjYjhmZWEiLCJpYXQiOjE1NDAxMjUwNzAsImV4cCI6MTU0MDE1Mzg3MCwiaXNzIjoiQXJjaGl0ZWN0IEFyY2hlb2xvZ3kncyBSRVNUIEFQSSBzZXJ2ZXIiLCJzdWIiOiI0Y2I5NGJlMC1kNTFkLTExZTgtYTliNS1iNzBhMzVjYjhmZWEifQ.Rfzxgnb8BklrWL2TROCjIFzPnxh7ic9TqUtJvLkpqns"
+} {"timestamp":"2018-10-21T12:31:10.401Z"}

@@ -1,0 +1,43 @@
+{
+  "name": "architect-archeology",
+  "version": "0.1.0",
+  "private": true,
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Alexandr Zeletnsov",
+    "email": "alexandr.zelentsov@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vimsvei/architect-acheology.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vimsvei/architect-acheology/issues"
+  },
+  "homepage": "./",
+  "main": "dist/server.js",
+  "scripts": {
+    "start": "tsc && node dist/server.js"
+  },
+  "dependencies": {
+    "@types/express": "^4.16.0",
+    "bcrypt": "^3.0.2",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.4",
+    "js-string-escape": "^1.0.1",
+    "jsonwebtoken": "^8.3.0",
+    "lodash": "^4.17.11",
+    "neo4j-driver": "^1.6.3",
+    "parse-neo4j": "^0.6.11",
+    "randomstring": "^1.1.5",
+    "uuid": "^3.3.2",
+    "winston": "^3.1.0"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.17.0",
+    "@types/jsonwebtoken": "^7.2.8",
+    "@types/node": "^10.12.0",
+    "typescript": "^3.1.3"
+  }
+}
